@@ -14,13 +14,13 @@ unsigned short Bk=0x265A,Bq=0x265B,Br=0x265C,Bb=0x265D,Bn=0x265E,Bp=0x265F;
 // define array to hold current positions
 // Note: black pieces are upper case, white are lower
 char board[8][8] = {{'R','N','B','Q','K','B','N','R'},
-					{'P','P','P','P','P','P','P','P'},
-					{' ',' ',' ',' ',' ',' ',' ',' '},
-					{' ',' ',' ',' ',' ',' ',' ',' '},
-					{' ',' ',' ',' ',' ',' ',' ',' '},
-					{' ',' ',' ',' ',' ',' ',' ',' '},
-					{'p','p','p','p','p','p','p','p'},
-					{'r','n','b','q','k','b','n','r'} };
+		    {'P','P','P','P','P','P','P','P'},
+  		    {' ',' ',' ',' ',' ',' ',' ',' '},
+		    {' ',' ',' ',' ',' ',' ',' ',' '},
+		    {' ',' ',' ',' ',' ',' ',' ',' '},
+		    {' ',' ',' ',' ',' ',' ',' ',' '},
+		    {'p','p','p','p','p','p','p','p'},
+		    {'r','n','b','q','k','b','n','r'} };
 
 void DisplayChessBoard();
 void PlacePiecesOnBoard();
@@ -32,7 +32,7 @@ int main() {
 	char lfcol,ltcol,hold;
 	int fcol=4,frow,tcol,trow;
 	setlocale(LC_CTYPE, "");
-    printf(CLEAR);
+    	printf(CLEAR);
 	DisplayChessBoard();
 	PlacePiecesOnBoard();
 	while (fcol < 9 && fcol > 0) {
@@ -40,7 +40,7 @@ int main() {
 		printf("Move? ");
 		scanf("%c%d%c%d",&lfcol,&frow,&ltcol,&trow);
 		getchar();
-        if(lfcol == 'q') exit(1);
+        	if(lfcol == 'q') exit(1);
 		fcol=lfcol-96;
 		tcol=ltcol-96;
 		frow=9-frow;
